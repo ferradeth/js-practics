@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .dropzone{
+            width: 200px;
+            min-height: 200px;
+            height: fit-content;
+            background-color:coral;
+            margin: 10px;
+            border: 5px blue solid;
+        }
+        #draggable{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .drag-start{
+            border: 2px red solid;
+        }
+        .drop-enter{
+            background-color: cadetblue;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        body{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="dropzone">
+        <div id="draggable" draggable="true"><img src="baby.jpg"></div>
+    </div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+
+    <script src="js2.js"></script>
+</body>
+</html>
