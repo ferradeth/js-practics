@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="7-5pr.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <label for="inText">Введите новую задачу:<br>
+        <input type="text" name="inText" id="inText">
+    </label>
+    <button value="OK" id="btn">OK</button>
+    <br><br>
+    <div id="container">
+        <div>
+            <h3>ТЕКУЩИЕ ЗАДАЧИ</h3>
+            <div class="dropzone current" data-place="current">
+                <p class="draggable" draggable="true">Задача №1</p>
+                <p class="draggable" draggable="true">Задача №2</p>
+                <p class="draggable" draggable="true">Задача №3</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>ВЫПОЛНЕННЫЕ ЗАДАЧИ</h3>
+            <div class="dropzone" data-place="done">
+                
+            </div>
+        </div>
+</div>
+    <script src="7-5pr.js"></script>
+</body>
+</html>

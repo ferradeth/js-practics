@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .pieces, .cells{
+            margin: 0 auto;
+            display: flex;
+            width: 610px;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .cells>*{
+            border: 1px black solid;
+            width: 200px;
+            height: 200px;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            cursor: move;
+        }
+        h1{
+            text-align: center;
+        }
+        .pieces>div{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+        }
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="pieces">
+        <div><img src="hedgehog/hedgehog-1.png" data-number='3' class="piece"></div>
+        <div><img src="hedgehog/hedgehog-2.png" data-number='5' class="piece"></div>
+        <div><img src="hedgehog/hedgehog-3.png" data-number='4' class="piece"></div>
+        <div><img src="hedgehog/hedgehog-4.png" data-number='6' class="piece"></div>
+        <div><img src="hedgehog/hedgehog-5.png" data-number='2' class="piece"></div>
+        <div><img src="hedgehog/hedgehog-6.png" data-number='1' class="piece"></div>
+    </div>
+    <h1 id="res">Собери картинку!</h1>
+    <div class="cells">
+        <div class="cell" data-number='1'></div>
+        <div class="cell" data-number='2'></div>
+        <div class="cell" data-number='3'></div>
+        <div class="cell" data-number='4'></div>
+        <div class="cell" data-number='5'></div>
+        <div class="cell" data-number='6'></div>
+    </div>
+<script src="7-4pr.js"></script>
+</body>
+</html>
