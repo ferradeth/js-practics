@@ -38,21 +38,20 @@ function dragover(e) {
     e.preventDefault()
 }
 
-//let i = 0
+let i = 0
 
 function drop(e) {
     e.preventDefault();
     if( e.target.tagName !== 'IMG') {
         //e.target.classList.add('true')
         e.target.append(dragItem)
-        //i++
         if(dragItem.dataset.role == 'predator') 
             changeStyle(dragSource, e.target.closest('.cell'), 'true')
     }
     // else if(e.target.tagName !== 'IMG') {
     //     e.target.append(dragItem)
     // }
-    //amount.textContent = `Кол-во найденных хищников: ${i}`
+    amount.textContent = `Кол-во найденных хищников: ${i}`
 }
 
 function dropBack(e) {
@@ -60,13 +59,17 @@ function dropBack(e) {
     changeStyle(dragSource, e.target.closest('.cell'), 'true')
     if(e.target.tagName !== 'IMG'){
         e.target.append(dragItem)
-        //i--
     }
-   
-    //amount.textContent = `Кол-во найденных хищников: ${i}`
+    amount.textContent = `Кол-во найденных хищников: ${i}`
 }
 
 function changeStyle(elSource, elRes, classRes){
-    if(elRes != null) elRes.classList.add(classRes)
-    if(elSource != null) elSource.classList.remove(classRes)
+    if(elRes != null){
+        elRes.classList.add(classRes)
+        i++
+    } 
+    if(elSource != null) {
+        elSource.classList.remove(classRes)
+        i--
+    }
 }
