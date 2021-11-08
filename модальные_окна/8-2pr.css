@@ -1,0 +1,75 @@
+.hide{
+    display: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: -1px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+article{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 700px;
+    margin: 0 auto;
+}
+header{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(21, 88, 85);
+    width: 100%;
+    background-color: rgb(147, 192, 192);
+    height: 70px;
+}
+article>img{
+    height: 60px;
+}
+.container>img{
+    width: 700px;
+}
+main{
+    width: 700px;
+    margin: auto;
+}
+button{
+    cursor: pointer;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(21, 88, 85);
+    color: white;
+}
+.modal-window{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(119, 117, 117, 0.486);
+}
+/*класс активного модального окна*/
+.active{
+    display: flex;
+}
+.modal-log{
+    position: relative;
+    margin: auto;
+    padding: 10px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px rgb(21, 88, 85);
+}
+.username{
+    font-size: 15px;
+    color: black;
+}

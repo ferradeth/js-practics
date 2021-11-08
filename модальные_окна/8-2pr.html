@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="8-2pr.css">
+    <script defer src="js/8-2pr.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <article>
+            <img src="img/PNG_69.png" alt="logo"> <span>JOHNNY COMMUNICATION CENTER</span>
+            <div>
+                <span class="username"></span>
+            <button class="enter" onclick="openModal()">Log In</button>
+            <button class="out hide"onclick="logOut(event)">Log Out</button>
+            </div>
+            
+        </article>
+    </header>
+    <main>
+        <div class="container">
+            <img src="img/img3.jpg" alt="photo">
+        </div>
+        <div class="modal-window hide">
+            <div class="modal-log">
+            <h1>Log in</h1>
+            Username:
+            <input type="text" placeholder="login" id="login">
+            Password:
+            <input type="password" placeholder="password" id="pass">
+            <button id="access" onclick="closeModal()">OK</button>
+        </div>
+        </div>
+    </main>
+</body>
+</html>
