@@ -22,11 +22,26 @@ let cards = [
 let cardsCont = document.querySelector('.cards')
 createManyCards(cards, cardsCont)
 
+rewind.addEventListener('click',()=> {
+    cardsCont.innerHTML = ""
+    localStorage.clear()
+    localEnter(cards)
+    createManyCards(cards, cardsCont)
+})
+
 function createManyCards(array, cont){
     array.forEach(item=>{
-        cont.insertAdjacentHTML('beforeend', createCard(item)) 
+        if (localStorage.getItem(`${item.id}`))
+        cont.insertAdjacentHTML('beforeend', localStorage.getItem(`${item.id}`)) 
     })
 }
+
+function localEnter(array){
+    array.forEach(item=>{
+        localStorage.setItem(`${item.id}`, createCard(item))
+    })
+}
+
 
 function createCard({image, head, body, id}){
     return `
@@ -57,6 +72,7 @@ document.querySelectorAll('.btn2').forEach(but=>{
 
 function deleteCard(e){
     e.target.closest('.card').remove()
+    localStorage.removeItem(`${e.target.closest('.card').id}`)
 }
 
 document.addEventListener('keydown', e=>{

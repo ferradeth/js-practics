@@ -28,9 +28,11 @@
             <div class="modal-log">
             <h1>Log in</h1>
             Username:
-            <input type="text" placeholder="login" id="login">
+            <input type="text" placeholder="login" id="login" autocomplete="off">
+            <span class="error login"></span>
             Password:
             <input type="password" placeholder="password" id="pass">
+            <span class="error pass"></span>
             <button id="access" onclick="closeModal()">OK</button>
         </div>
         </div>

@@ -73,3 +73,7 @@ button{
     font-size: 15px;
     color: black;
 }
+.error{
+    font-size: 10px;
+    color: red;
+}
