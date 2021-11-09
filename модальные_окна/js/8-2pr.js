@@ -1,15 +1,16 @@
-document.querySelector('.username').textContent = JSON.parse(localStorage.getItem('user')).name
 
-if (localStorage.getItem('user').name !== null){
+const modal = document.querySelector('.modal-window')
+
+if (localStorage.getItem('user')){
+    document.querySelector('.username').textContent = JSON.parse(localStorage.getItem('user')).name
     document.querySelector('.enter').classList.add('hide')
     document.querySelector('.out').classList.remove('hide')
 }
 
-let modal = document.querySelector('.modal-window')
-
 function openModal(){
-    modal.classList.replace('hide', 'active')
+    document.querySelector('.modal-window').classList.replace('hide', 'active')
 }
+document.querySelector('.enter').addEventListener('click', openModal)
 
 function logOut(e){
     e.target.classList.add('hide')
