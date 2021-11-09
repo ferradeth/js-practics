@@ -22,7 +22,7 @@ let cards = [
 let cardsCont = document.querySelector('.cards')
 createManyCards(cards, cardsCont)
 
-rewind.addEventListener('click',()=> {
+backCards.addEventListener('click',()=> {
     cardsCont.innerHTML = ""
     localStorage.clear()
     localEnter(cards)
