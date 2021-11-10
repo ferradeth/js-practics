@@ -36,13 +36,12 @@ document.addEventListener('keydown', e=>{
 })
 
 function closeModal(){
-    if (login.value == "")
+    if (login.value.trim().length <=0)
         document.querySelector('.login').textContent = 'username must contain more than 0 symbols'
-    else if (pass.value == ""){
+    if (pass.value.trim().length <=0){
         document.querySelector('.login').textContent = ""
         document.querySelector('.pass').textContent = 'password must contain more than 0 symbols'
     }
-    
     else{
         modal.classList.replace('active', 'hide') 
         enter.classList.add('hide')
