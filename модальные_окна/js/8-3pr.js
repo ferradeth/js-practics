@@ -72,28 +72,38 @@ document.addEventListener('keydown', (e) => {
     }
 })
 
-document.addEventListener('keyup', (e) => {
-    if(e.code == 'ArrowLeft') {
-        if(count>1) {
+function left (){
+    if(count>1) {
             count--
-            showModal(count)
+           
         }
         else {
             count=cards.length
-            showModal(count)
         }
-    }
-    if (e.code == 'ArrowRight'){
-        if (count < cards.length){
+    showModal(count)
+}
+
+function right (){
+    if (count < cards.length){
             count++
-            showModal(count)
         }
         else {
             count = 1
-            showModal(count)
-        }
+        } 
+    showModal(count)
+}
+document.addEventListener('keyup', (e) => {
+    if(e.code == 'ArrowLeft') {
+        left()
+    }
+    if (e.code == 'ArrowRight'){
+        right()
     }
 })
+
+// document.getElementById('left'),addEventListener('click', left)
+// document.getElementById('right'),addEventListener('click', right)
+//если я их добавляю у меня перестаёт даже крестик кликаться(( не знаю в чём проблема
 
 document.querySelectorAll('.img').forEach((elem)=> {
     elem.addEventListener('click', (e)=>{

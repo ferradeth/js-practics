@@ -35,22 +35,33 @@ document.addEventListener('keydown', e=>{
     }
 })
 
+function valid(el){
+    if (el.value.trim().length <=0)return true
+    else return false
+}
+
+function closM(){
+    modal.classList.replace('active', 'hide') 
+    enter.classList.add('hide')
+    out.classList.remove('hide')
+    localStorage.setItem('user', JSON.stringify({name: login.value, password: pass.value}))
+    username.classList.remove('hide')
+    username.textContent = JSON.parse(localStorage.getItem('user')).name
+    document.querySelector('.login').textContent = ""
+    document.querySelector('.pass').textContent = ""
+}
+
 function closeModal(){
-    if (login.value.trim().length <=0)
+    if (valid(login)){
         document.querySelector('.login').textContent = 'username must contain more than 0 symbols'
-    if (pass.value.trim().length <=0){
+        if (valid(pass))
+        document.querySelector('.pass').textContent = 'password must contain more than 0 symbols'
+        else document.querySelector('.pass').textContent = ""
+    }
+    else if (valid(pass)){
         document.querySelector('.login').textContent = ""
         document.querySelector('.pass').textContent = 'password must contain more than 0 symbols'
     }
-    else{
-        modal.classList.replace('active', 'hide') 
-        enter.classList.add('hide')
-        out.classList.remove('hide')
-        localStorage.setItem('user', JSON.stringify({name: login.value, password: pass.value}))
-        username.classList.remove('hide')
-        username.textContent = JSON.parse(localStorage.getItem('user')).name
-        document.querySelector('.login').textContent = ""
-        document.querySelector('.pass').textContent = ""
-    }
+    else closM()
 }
 

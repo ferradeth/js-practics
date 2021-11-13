@@ -8,10 +8,12 @@ document.body.addEventListener('drop', moveDrop)
 
 
 function moveStart(e) {
+    
     dragItem = e.target
     x = e.offsetX
     y = e.offsetY
     dragItem.style.zIndex = 10
+    
 }
 
 function moveDrop(e) {
